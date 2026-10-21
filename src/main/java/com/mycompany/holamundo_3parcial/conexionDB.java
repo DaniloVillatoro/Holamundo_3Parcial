@@ -17,10 +17,10 @@ public class conexionDB {
     private static final String CLAVE = "sqlvillatoro"; 
     private static Connection conexion = null;
     
-    private static final String URL = "jdbc:sqlserver://DESKTOP-QUBFGRV\\SQLEXPRESS;"
-            + "databaseName=AvanzadaII;"
+    private static final String URL = "jdbc:libsql://avanzadaii-danilovillatoro.aws-us-west-2.turso.io;";
+            /*+ "databaseName=AvanzadaII;"
             + "encrypt=true;"
-            + "trustServerCertificate=true;";
+            + "trustServerCertificate=true;";*/
 
     public static Connection obtenerConexion() {
         Connection cn = null;
