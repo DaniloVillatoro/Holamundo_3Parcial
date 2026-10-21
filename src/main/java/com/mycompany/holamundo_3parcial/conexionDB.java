@@ -14,8 +14,7 @@ import java.sql.SQLException;
 public class conexionDB {
 
     private static final String AUTH_TOKEN =
-        "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3OTI1ODk2MjksImlkIjoiMDFhMTVjYTEtMDAwMS03NWM2LWJlNDctOWM1YTRjZDcwM2I3Iiwia2lkIjoiN21teThMNTlDUl9fNUxHazZRaExCeXJqQ3lsLTBHMXk2eGRTRDQ5THlwVSIsInJpZCI6ImU1ODExYzhjLWFkOGQtNGEyMy05ZjJlLWI1YjNiNDdhZjUxZCJ9.Y5PXxFuQuzIVcmebECkrxjDVIqkbdjbdMFHH3ZqMgAC_PdYEjjnJiPaCMhaXC7Pqem3T-PJmOVJ5mD2ic5rmAQ";
-
+        System.getenv("TURSO_AUTH_TOKEN");
     private static final String URL =
         "jdbc:dbeaver:libsql:https://avanzadaii-danilovillatoro.aws-us-west-2.turso.io";
 
