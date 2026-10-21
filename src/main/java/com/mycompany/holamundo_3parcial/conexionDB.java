@@ -12,9 +12,13 @@ import java.sql.SQLException;
  * @author Dell
  */
 public class conexionDB {
-    private static final String USUARIO = "sa";
-    private static final String CLAVE = "sqlvillatoro"; 
+    private static final String AUTH_TOKEN = "AQUÍ_PEGAS_TU_TOKEN_DE_TURSO"; 
     private static Connection conexion = null;
+    
+    /*private static final String USUARIO = "sa";
+    private static final String CLAVE = "sqlvillatoro"; 
+    private static Connection conexion = null;*/
+    
     
     private static final String URL = "jdbc:libsql://avanzadaii-danilovillatoro.aws-us-west-2.turso.io;";
             /*+ "databaseName=AvanzadaII;"
@@ -24,8 +28,9 @@ public class conexionDB {
     public static Connection obtenerConexion() {
         Connection cn = null;
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            cn = DriverManager.getConnection(URL, USUARIO, CLAVE);
+            //Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            Class.forName("tech.turso.jdbc.LibsqlDriver");
+            cn = DriverManager.getConnection(URL);
             System.out.println("¡Conexion establecida con exito!");
         } catch (ClassNotFoundException e) {
             System.err.println("Error: Driver JDBC no encontrado. " + e.getMessage());
