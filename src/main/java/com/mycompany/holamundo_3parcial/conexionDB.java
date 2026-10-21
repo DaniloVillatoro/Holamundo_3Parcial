@@ -20,7 +20,7 @@ public class conexionDB {
     private static Connection conexion = null;*/
     
     
-    private static final String URL = "jdbc:libsql://avanzadaii-danilovillatoro.aws-us-west-2.turso.io;";
+    private static final String URL = "jdbc:libsql://avanzadaii-danilovillatoro.aws-us-west-2.turso.io;"+ AUTH_TOKEN;;
             /*+ "databaseName=AvanzadaII;"
             + "encrypt=true;"
             + "trustServerCertificate=true;";*/
