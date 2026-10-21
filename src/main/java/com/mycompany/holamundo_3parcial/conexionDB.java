@@ -12,7 +12,6 @@ import java.sql.SQLException;
  * @author Dell
  */
 public class conexionDB {
-
     private static final String USUARIO = "sa";
     private static final String CLAVE = "sqlvillatoro"; 
     private static Connection conexion = null;
